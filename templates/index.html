@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pest Advisory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        const pestData = {{ pests | tojson }};
+        function updatePests() {
+            const crop = document.getElementById("crop").value;
+            const pestSelect = document.getElementById("pest");
+            pestSelect.innerHTML = "";
+            if (pestData[crop]) {
+                for (let pest in pestData[crop]) {
+                    const option = document.createElement("option");
+                    option.value = pest;
+                    option.text = pest;
+                    pestSelect.appendChild(option);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Select Crop and Pest</h2>
+    <form action="/result" method="post">
+        <label>Crop:</label>
+        <select name="crop" id="crop" onchange="updatePests()">
+            {% for crop in pests %}
+                <option value="{{ crop }}">{{ crop }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Pest:</label>
+        <select name="pest" id="pest">
+            {% for pest in pests['Wheat'] %}
+                <option value="{{ pest }}">{{ pest }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Get Advisory</button>
+    </form>
+</body>
+</html>
