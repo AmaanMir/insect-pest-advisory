@@ -49,7 +49,7 @@ python app.py
 ## 📸 Screenshots
 
 ### 🏠 Homepage
-![Homepage](Screenshots\Homepage.png)
+![Homepage](screenshots/Homepage.png)
 
 ### ✅ Advisory Result
-![Solution](Screenshots\Solution.png)
+![Solution](screenshots/Solution.png)
