@@ -44,3 +44,12 @@ pip install -r requirements.txt
 
 # Run the app
 python app.py
+---
+
+## 📸 Screenshots
+
+### 🏠 Homepage
+![Homepage](Screenshots\Homepage.png)
+
+### ✅ Advisory Result
+![Solution](Screenshots\Solution.png)
