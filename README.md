@@ -46,11 +46,5 @@ pip install -r requirements.txt
 python app.py
 ---
 
-## 📸 Screenshots
 
-### 🏠 Homepage
-![Homepage](screenshots/Homepage.png)
-
-### ✅ Advisory Result
-![Solution](screenshots/Solution.png)
  
